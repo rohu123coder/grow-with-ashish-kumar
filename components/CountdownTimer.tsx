@@ -1,7 +1,14 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-export default function CountdownTimer({ targetDate }: { targetDate: string }) {
+/** Event day countdown: 24 May 2026, 8:00 AM IST (seminar start). */
+export const EVENT_COUNTDOWN_TARGET = '2026-05-24T08:00:00+05:30'
+
+export default function CountdownTimer({
+  targetDate = EVENT_COUNTDOWN_TARGET,
+}: {
+  targetDate?: string
+}) {
   const [mounted, setMounted] = useState(false)
   const [timeLeft, setTimeLeft] = useState({ d: 0, h: 0, m: 0, s: 0 })
 

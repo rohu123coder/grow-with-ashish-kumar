@@ -13,7 +13,7 @@ export function UrgencyBar() {
         <span aria-hidden>⚡</span> Early Bird Closing Soon — Price increases after May 10
       </p>
       <div className="flex min-w-0 flex-1 justify-center text-white lg:flex-none lg:flex-initial">
-        <CountdownTimer targetDate="2026-05-10T23:59:59+05:30" />
+        <CountdownTimer />
       </div>
       <div className="flex shrink-0 items-center gap-2 text-xs sm:text-sm">
         <a

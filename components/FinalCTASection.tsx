@@ -20,7 +20,7 @@ export function FinalCTASection() {
         </p>
 
         <div className="mt-10 flex justify-center">
-          <CountdownTimer targetDate="2026-05-10T23:59:59+05:30" />
+          <CountdownTimer />
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">

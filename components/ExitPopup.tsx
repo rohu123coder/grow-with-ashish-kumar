@@ -96,7 +96,7 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
           <div className="bg-[#0F1240] px-5 py-5">
             <p className="text-center text-lg font-semibold text-gold sm:text-xl">Your Special Offer Expires In:</p>
             <div className="mt-3 flex justify-center">
-              <CountdownTimer targetDate="2026-05-10T23:59:59+05:30" />
+              <CountdownTimer />
             </div>
             <p className="mt-4 text-center text-sm font-bold text-white">🔴 Only {seats} seats left at this price</p>
           </div>
