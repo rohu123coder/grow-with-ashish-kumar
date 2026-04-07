@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { SeatCounter } from "@/components/SeatCounter";
 import { RAZORPAY_GOLD, RAZORPAY_PLATINUM } from "@/lib/links";
+
+const HERO_IMAGE = "/images/ashish-stage2.png";
 
 export function HeroSection() {
   const openLink = (url: string) => {
@@ -61,15 +64,15 @@ export function HeroSection() {
 
           <div className="relative order-1 lg:order-2">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
-              <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(201,168,76,0.35)] ring-2 ring-gold/40">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/ashish-stage2.png"
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(201,168,76,0.35)] ring-2 ring-gold/40 sm:aspect-[3/4]">
+                <Image
+                  src={HERO_IMAGE}
                   alt="Ashissh Kumaar teaching on stage with large screen behind him"
-                  className="h-auto w-full object-cover"
+                  fill
+                  className="object-cover object-center"
                   style={{ mixBlendMode: "lighten" }}
-                  decoding="async"
-                  fetchPriority="high"
+                  sizes="(max-width: 1024px) 100vw, min(560px, 50vw)"
+                  priority
                 />
               </div>
 
