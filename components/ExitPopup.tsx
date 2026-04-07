@@ -11,24 +11,29 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
   const [seats, setSeats] = useState(84);
 
   useEffect(() => {
+    const openPopup = () => {
+      if (salesPopupOpen) return;
+      setSeats(getSeatCount());
+      setIsOpen(true);
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => setVisible(true))
+      );
+    };
+
+    const autoOpenTimer = setTimeout(() => {
+      openPopup();
+    }, 1000);
+
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 5) {
-        const shown = sessionStorage.getItem("hc_exit_shown");
-        if (!shown && !salesPopupOpen) {
-          setSeats(getSeatCount());
-          setIsOpen(true);
-          requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
-          sessionStorage.setItem("hc_exit_shown", "true");
-        }
+        openPopup();
       }
     };
 
-    const timer = setTimeout(() => {
-      document.addEventListener("mouseleave", handleMouseLeave);
-    }, 5000);
+    document.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(autoOpenTimer);
       document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [salesPopupOpen]);
@@ -103,21 +108,11 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
               <li className="flex gap-2"><span className="text-gold">✅</span><span>Certificate + Advanced Remedies you won&apos;t find anywhere</span></li>
             </ul>
 
-            <button
-              type="button"
-              onClick={() => openLink(RAZORPAY_PLATINUM)}
-              className="mt-5 w-full rounded-xl bg-gradient-to-r from-gold to-gold-light py-4 text-base font-bold text-navy shadow-lg transition hover:brightness-105"
-            >
-              🔥 YES! Secure My Seat Now — ₹1,580 onwards
-            </button>
+            <p className="mt-5 text-center text-sm font-semibold text-navy">
+              🔥 Secure your seat now — select Platinum or Gold below
+            </p>
 
-            <div className="my-5 flex items-center gap-3">
-              <div className="h-px flex-1 bg-gold/30" />
-              <span className="text-xs font-semibold text-ink-muted">OR</span>
-              <div className="h-px flex-1 bg-gold/30" />
-            </div>
-
-            <div className="flex flex-col gap-2 sm:flex-row">
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row">
               <button type="button" onClick={() => openLink(RAZORPAY_PLATINUM)} className="flex-1 rounded-lg border-2 border-gold py-2.5 text-sm font-bold text-gold transition hover:bg-gold/10">Platinum ₹2,100</button>
               <button type="button" onClick={() => openLink(RAZORPAY_GOLD)} className="flex-1 rounded-lg border-2 border-gold py-2.5 text-sm font-bold text-gold transition hover:bg-gold/10">Gold ₹1,580</button>
             </div>
