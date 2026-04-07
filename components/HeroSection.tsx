@@ -64,9 +64,10 @@ export function HeroSection() {
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(201,168,76,0.35)] ring-2 ring-gold/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/ashish-stage2.jpeg"
+                  src="/images/ashish-stage2.png"
                   alt="Ashissh Kumaar teaching on stage with large screen behind him"
                   className="h-auto w-full object-cover"
+                  style={{ mixBlendMode: "lighten" }}
                   decoding="async"
                   fetchPriority="high"
                 />
