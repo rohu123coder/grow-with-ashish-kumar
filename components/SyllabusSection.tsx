@@ -70,28 +70,6 @@ const MODULES: Module[] = [
     title: "How to Choose Lucky Names",
     subpoints: ["Business Name", "City Name", "Currency Name Alphabet"],
   },
-  {
-    n: 8,
-    icon: "🏡",
-    title: "Residential Vastu",
-    subpoints: [
-      "Room placement & directions",
-      "Bedroom, kitchen & bathroom Vastu",
-      "Remedies for existing homes",
-      "Energy balancing techniques",
-    ],
-  },
-  {
-    n: 9,
-    icon: "🏢",
-    title: "Commercial Vastu",
-    subpoints: [
-      "Office & shop layout",
-      "Cash counter & entrance direction",
-      "Employee productivity zones",
-      "Business growth remedies",
-    ],
-  },
 ];
 
 export function SyllabusSection() {
@@ -106,7 +84,7 @@ export function SyllabusSection() {
         <div className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">Complete Syllabus</p>
           <h2 className="mt-2 font-display text-2xl font-bold text-navy sm:text-3xl md:text-4xl">
-            8 Hours. 9 Modules. Life-Changing Knowledge.
+            8 Hours. 7 Modules. Life-Changing Knowledge.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-ink-muted">From zero to practitioner — in a single day</p>
         </div>

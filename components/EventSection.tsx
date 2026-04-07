@@ -20,7 +20,7 @@ export function EventSection() {
               <li>
                 <span className="font-semibold text-navy">📍 Venue:</span> Bal Gandharva Rang Mandir, Sheila Gopal Raheja Auditorium
                 <br />
-                505, Bandra West, Mumbai – 400050
+                505, Bandra West, Mumbai 400050
               </li>
               <li>
                 <span className="font-semibold text-navy">💬 Enquiries:</span> 7278822228
@@ -65,7 +65,7 @@ export function EventSection() {
         <div className="mt-8 overflow-hidden rounded-xl ring-1 ring-gold/20">
           <iframe
             title="Bal Gandharva Rang Mandir, Bandra West"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.099!2d72.8295!3d19.0544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d6f7e0f4b5%3A0x1234!2sBal%20Gandharva%20Rang%20Mandir!5e0!3m2!1sen!2sin"
+            src="https://maps.google.com/maps?q=Bal+Gandharva+Rang+Mandir+Bandra+West+Mumbai&output=embed"
             width="100%"
             height={300}
             style={{ border: 0 }}

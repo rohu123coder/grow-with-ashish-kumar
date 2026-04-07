@@ -1,5 +1,3 @@
-import { courseImages } from "@/lib/courseImages";
-
 export function SpeakerSection() {
   return (
     <section className="border-t border-gold/20 bg-surface py-12 md:py-16">
@@ -9,10 +7,8 @@ export function SpeakerSection() {
             <div className="overflow-hidden rounded-xl shadow-[0_20px_50px_-15px_rgba(201,168,76,0.35)] ring-1 ring-gold/20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={courseImages.formal.src}
+                src="/images/ashish-stage2.jpeg"
                 alt="Ashissh Kumaar in formal black bandhgala jacket"
-                width={courseImages.formal.width}
-                height={courseImages.formal.height}
                 className="h-auto w-full object-cover"
                 decoding="async"
               />

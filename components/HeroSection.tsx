@@ -4,7 +4,7 @@ import Image from "next/image";
 import { SeatCounter } from "@/components/SeatCounter";
 import { RAZORPAY_GOLD, RAZORPAY_PLATINUM } from "@/lib/links";
 
-const HERO_IMAGE = "/images/ashish-stage2.png";
+const HERO_IMAGE = "/images/ashish-formal.png";
 
 export function HeroSection() {
   const openLink = (url: string) => {
