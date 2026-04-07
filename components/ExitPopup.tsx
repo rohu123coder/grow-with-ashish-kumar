@@ -81,13 +81,15 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
           <button
             type="button"
             onClick={closePopup}
-            className="absolute right-2 top-2 z-20 rounded-full px-2 py-1 text-2xl leading-none text-gray-600 hover:bg-black/5"
+            className="absolute right-2 top-2 z-20 rounded-full px-2 py-1 text-2xl leading-none text-white/95 drop-shadow-sm hover:bg-black/15"
             aria-label="Close"
           >
             ×
           </button>
 
-          <div className="rounded-t-2xl bg-gradient-to-r from-red-600 to-red-800 px-5 pb-5 pt-6 text-center text-white">
+          <div
+            className="rounded-t-2xl bg-gradient-to-br from-[#FBBF24] via-[#F59E0B] to-[#D97706] px-5 pb-5 pt-6 text-center text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]"
+          >
             <div className="text-4xl" aria-hidden>⚠️</div>
             <h2 id="exit-popup-title" className="mt-2 font-display text-xl font-bold sm:text-2xl">Wait! Don&apos;t Miss This!</h2>
             <p className="mt-2 text-sm text-white/90 sm:text-base">You&apos;re about to leave without securing your seat</p>
