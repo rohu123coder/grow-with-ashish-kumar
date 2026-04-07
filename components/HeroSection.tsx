@@ -1,7 +1,6 @@
 "use client";
 
 import { SeatCounter } from "@/components/SeatCounter";
-import { courseImages } from "@/lib/courseImages";
 import { RAZORPAY_GOLD, RAZORPAY_PLATINUM } from "@/lib/links";
 
 export function HeroSection() {
@@ -65,10 +64,8 @@ export function HeroSection() {
               <div className="relative overflow-hidden rounded-2xl shadow-[0_25px_60px_-12px_rgba(201,168,76,0.35)] ring-2 ring-gold/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={courseImages.stage.src}
+                  src="/images/ashish-stage2.jpeg"
                   alt="Ashissh Kumaar teaching on stage with large screen behind him"
-                  width={courseImages.stage.width}
-                  height={courseImages.stage.height}
                   className="h-auto w-full object-cover"
                   decoding="async"
                   fetchPriority="high"
