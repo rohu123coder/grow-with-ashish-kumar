@@ -40,7 +40,7 @@ export function EventSection() {
                 { icon: "🍽️", label: "Lunch Provided" },
                 { icon: "☕", label: "Tea & Refreshments" },
                 { icon: "📝", label: "Course Stationery" },
-                { icon: "🎓", label: "Participation Certificate" },
+                { icon: "💡", label: "Expert-Led Live Session" },
               ].map((f) => (
                 <div
                   key={f.label}

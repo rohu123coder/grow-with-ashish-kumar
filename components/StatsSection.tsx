@@ -1,5 +1,5 @@
 const STATS = [
-  { icon: "🎓", value: "5000+", label: "Students Trained" },
+  { icon: "🎓", value: "10000+", label: "Vastu Trained" },
   { icon: "🏙️", value: "50+", label: "Cities Covered" },
   { icon: "🏆", value: "1", label: "Global Icon Award 2023" },
   { icon: "⭐", value: "4.9/5", label: "Average Rating" },

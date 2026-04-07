@@ -56,7 +56,6 @@ export function HeroSection() {
             <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs text-white/70 sm:text-sm">
               <span>✅ Lunch Included</span>
               <span>✅ Stationery</span>
-              <span>✅ Certificate</span>
               <span>❌ No Recording</span>
             </p>
           </div>
@@ -77,7 +76,7 @@ export function HeroSection() {
               </div>
 
               <div className="absolute right-3 top-3 rounded-full border border-gold/50 bg-navy/90 px-3 py-1.5 text-xs font-semibold text-gold-light shadow-lg backdrop-blur-sm sm:text-sm">
-                5000+ Lives Transformed <span aria-hidden>🌟</span>
+                10000+ Lives Transformed <span aria-hidden>🌟</span>
               </div>
 
               <div className="absolute bottom-3 left-3 right-3 sm:left-auto sm:w-auto">

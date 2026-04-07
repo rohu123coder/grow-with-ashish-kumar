@@ -105,7 +105,7 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
             <ul className="space-y-2 text-sm text-ink sm:text-base">
               <li className="flex gap-2"><span className="text-gold">✅</span><span>Full day training with Ashissh Kumaar</span></li>
               <li className="flex gap-2"><span className="text-gold">✅</span><span>Lunch, Tea &amp; Stationery included</span></li>
-              <li className="flex gap-2"><span className="text-gold">✅</span><span>Certificate + Advanced Remedies you won&apos;t find anywhere</span></li>
+              <li className="flex gap-2"><span className="text-gold">✅</span><span>Advanced Remedies you won&apos;t find anywhere</span></li>
             </ul>
 
             <p className="mt-5 text-center text-sm font-semibold text-navy">

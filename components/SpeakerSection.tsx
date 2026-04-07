@@ -40,7 +40,7 @@ export function SpeakerSection() {
               {[
                 "Certified Astro-Vastu Consultant with years of expertise",
                 "Winner — Global Icon Award 2023",
-                "5000+ students trained across 50+ cities",
+                "10000+ people trained across 50+ cities",
                 "Specializes in no-demolition Vastu consultancy",
               ].map((item) => (
                 <li key={item} className="flex gap-2">

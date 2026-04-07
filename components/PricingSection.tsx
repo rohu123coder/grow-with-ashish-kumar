@@ -35,7 +35,6 @@ export function PricingSection() {
                 "Full Day Access (8 AM – 4 PM)",
                 "Lunch + Tea Included",
                 "Course Stationery Kit",
-                "Participation Certificate",
               ].map((line) => (
                 <li key={line} className="flex gap-2"><span className="text-success">✅</span><span>{line}</span></li>
               ))}
@@ -63,7 +62,7 @@ export function PricingSection() {
               <p className="text-sm font-semibold text-navy">Everything in Gold PLUS:</p>
               <ul className="mt-4 flex-1 space-y-3 text-sm text-ink">
                 {[
-                  "Front Row Priority Seating",
+                  "Priority seating in the first 5 rows only — 80 Platinum seats in this category",
                   "Priority Q&A with Ashissh Kumaar",
                   "Exclusive Bonus Digital Resource PDF",
                   "Early Entry Access",

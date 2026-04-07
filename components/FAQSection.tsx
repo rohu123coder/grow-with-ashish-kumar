@@ -28,10 +28,6 @@ const FAQS = [
     q: "How do I register?",
     a: "Click any 'Book Seat' button on this page to connect on WhatsApp. Our team will guide you through payment and confirmation.",
   },
-  {
-    q: "Will I get a certificate?",
-    a: "Yes. All attendees receive a Certificate of Participation.",
-  },
 ];
 
 export function FAQSection() {
