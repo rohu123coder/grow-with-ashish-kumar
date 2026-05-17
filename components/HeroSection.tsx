@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { SeatCounter } from "@/components/SeatCounter";
-import { RAZORPAY_GOLD, RAZORPAY_PLATINUM } from "@/lib/links";
+import { RAZORPAY_BOOKING } from "@/lib/links";
 
 const HERO_IMAGE = "/images/ashish-formal.jpeg";
 
@@ -38,20 +38,13 @@ export function HeroSection() {
               <span className="rounded-full border border-gold/60 bg-white/5 px-3 py-1.5 text-xs font-medium text-gold-light backdrop-blur-sm sm:text-sm">📍 Bandra West, Mumbai</span>
             </div>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-6">
               <button
                 type="button"
-                onClick={() => openLink(RAZORPAY_PLATINUM)}
-                className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-gold to-gold-light px-5 py-3.5 text-sm font-bold text-navy shadow-lg transition hover:brightness-105 sm:text-base"
+                onClick={() => openLink(RAZORPAY_BOOKING)}
+                className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-gold to-gold-light px-5 py-3.5 text-sm font-bold text-navy shadow-lg transition hover:brightness-105 sm:w-auto sm:text-base"
               >
-                <span aria-hidden>🔥</span>&nbsp;Book Platinum — ₹2,100
-              </button>
-              <button
-                type="button"
-                onClick={() => openLink(RAZORPAY_GOLD)}
-                className="inline-flex items-center justify-center rounded-lg border-2 border-gold bg-transparent px-5 py-3.5 text-sm font-semibold text-gold-light transition hover:bg-white/10 sm:text-base"
-              >
-                Book Gold — ₹1,580
+                <span aria-hidden>🔥</span>&nbsp;Book Your Seat Now — ₹500
               </button>
             </div>
 

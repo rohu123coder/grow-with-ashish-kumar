@@ -16,10 +16,12 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { SeatCountProvider } from "@/components/SeatCountProvider";
 import { LandingPopups } from "@/components/LandingPopups";
+import { MetaPixelLanding } from "@/components/MetaPixelLanding";
 
 export default function Home() {
   return (
     <SeatCountProvider>
+      <MetaPixelLanding />
       <UrgencyBar />
       <main className="pb-24 md:pb-0">
         <HeroSection />

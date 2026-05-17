@@ -2,11 +2,11 @@
 
 import CountdownTimer from "@/components/CountdownTimer";
 import { SeatCounter } from "@/components/SeatCounter";
-import { RAZORPAY_GOLD, RAZORPAY_PLATINUM, WHATSAPP_ENQUIRY } from "@/lib/links";
+import { RAZORPAY_BOOKING, WHATSAPP_ENQUIRY } from "@/lib/links";
 
 export function FinalCTASection() {
-  const openLink = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+  const openBooking = () => {
+    window.open(RAZORPAY_BOOKING, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -23,20 +23,13 @@ export function FinalCTASection() {
           <CountdownTimer />
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+        <div className="mt-10 flex justify-center">
           <button
             type="button"
-            onClick={() => openLink(RAZORPAY_PLATINUM)}
-            className="inline-flex w-full max-w-xs items-center justify-center rounded-lg bg-gradient-to-r from-gold to-gold-light px-6 py-4 text-base font-bold text-navy shadow-lg transition hover:brightness-105 sm:w-auto"
+            onClick={openBooking}
+            className="inline-flex w-full max-w-sm items-center justify-center rounded-lg bg-gradient-to-r from-gold to-gold-light px-6 py-4 text-base font-bold text-navy shadow-lg transition hover:brightness-105 sm:w-auto"
           >
-            <span aria-hidden>🔥</span>&nbsp;Book Platinum — ₹2,100
-          </button>
-          <button
-            type="button"
-            onClick={() => openLink(RAZORPAY_GOLD)}
-            className="inline-flex w-full max-w-xs items-center justify-center rounded-lg border-2 border-gold px-6 py-4 text-base font-bold text-gold transition hover:bg-white/5 sm:w-auto"
-          >
-            Book Gold — ₹1,580
+            <span aria-hidden>🔥</span>&nbsp;Book Your Seat Now — ₹500
           </button>
         </div>
 
@@ -53,7 +46,7 @@ export function FinalCTASection() {
         </div>
 
         <p className="mx-auto mt-6 max-w-xl text-sm font-semibold text-urgency sm:text-base">
-          ⚠️ <SeatCounter className="inline-flex font-semibold" /> · No recording · Live only · Prices go up May 10
+          ⚠️ <SeatCounter className="inline-flex font-semibold" /> · No recording · Live only
         </p>
       </div>
     </section>

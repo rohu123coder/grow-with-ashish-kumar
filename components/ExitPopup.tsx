@@ -2,7 +2,7 @@
 
 import CountdownTimer from "@/components/CountdownTimer";
 import { getSeatCount } from "@/lib/popupUtils";
-import { RAZORPAY_GOLD, RAZORPAY_PLATINUM } from "@/lib/links";
+import { RAZORPAY_BOOKING } from "@/lib/links";
 import { useEffect, useState } from "react";
 
 export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
@@ -110,14 +110,13 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
               <li className="flex gap-2"><span className="text-gold">✅</span><span>Advanced Remedies you won&apos;t find anywhere</span></li>
             </ul>
 
-            <p className="mt-5 text-center text-sm font-semibold text-navy">
-              🔥 Secure your seat now — select Platinum or Gold below
-            </p>
-
-            <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-              <button type="button" onClick={() => openLink(RAZORPAY_PLATINUM)} className="flex-1 rounded-lg border-2 border-gold py-2.5 text-sm font-bold text-gold transition hover:bg-gold/10">Platinum ₹2,100</button>
-              <button type="button" onClick={() => openLink(RAZORPAY_GOLD)} className="flex-1 rounded-lg border-2 border-gold py-2.5 text-sm font-bold text-gold transition hover:bg-gold/10">Gold ₹1,580</button>
-            </div>
+            <button
+              type="button"
+              onClick={() => openLink(RAZORPAY_BOOKING)}
+              className="mt-5 w-full rounded-lg bg-gradient-to-r from-gold to-gold-light py-3.5 text-sm font-bold text-navy shadow-md transition hover:brightness-105"
+            >
+              🔥 Book Your Seat Now — ₹500
+            </button>
 
             <button type="button" onClick={closePopup} className="mx-auto mt-5 block max-w-md text-center text-[11px] italic text-gray-500 underline-offset-2 hover:text-gray-700 hover:underline">
               No thanks, I don&apos;t want to transform my life

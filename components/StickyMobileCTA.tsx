@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { RAZORPAY_GOLD, RAZORPAY_PLATINUM } from "@/lib/links";
+import { RAZORPAY_BOOKING } from "@/lib/links";
 
 export function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
@@ -21,8 +21,8 @@ export function StickyMobileCTA() {
     return () => observer.disconnect();
   }, []);
 
-  const openLink = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+  const openBooking = () => {
+    window.open(RAZORPAY_BOOKING, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -37,20 +37,13 @@ export function StickyMobileCTA() {
           visible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="mx-auto flex max-w-lg gap-2">
+        <div className="mx-auto max-w-lg">
           <button
             type="button"
-            onClick={() => openLink(RAZORPAY_GOLD)}
-            className="flex-1 rounded-lg border border-gold py-3 text-sm font-bold text-gold"
+            onClick={openBooking}
+            className="w-full rounded-lg bg-gradient-to-r from-gold to-gold-light py-3.5 text-sm font-bold text-navy"
           >
-            Gold ₹1,580
-          </button>
-          <button
-            type="button"
-            onClick={() => openLink(RAZORPAY_PLATINUM)}
-            className="flex-1 rounded-lg bg-gradient-to-r from-gold to-gold-light py-3 text-sm font-bold text-navy"
-          >
-            <span aria-hidden>🔥</span> Platinum ₹2,100
+            <span aria-hidden>🔥</span> Book Your Seat Now — ₹500
           </button>
         </div>
       </div>
