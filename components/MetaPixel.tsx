@@ -5,11 +5,31 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
+/** Prevents duplicate PageView (script + effect, React Strict Mode, re-renders). */
+let lastPageViewPath: string | null = null;
+
+function trackPageViewOnce(pathname: string) {
+  if (lastPageViewPath === pathname) return;
+  if (typeof window.fbq !== "function") return false;
+
+  trackMetaEvent("PageView");
+  lastPageViewPath = pathname;
+  return true;
+}
+
 export function MetaPixel() {
   const pathname = usePathname();
 
   useEffect(() => {
-    trackMetaEvent("PageView");
+    if (trackPageViewOnce(pathname)) return;
+
+    const interval = window.setInterval(() => {
+      if (trackPageViewOnce(pathname)) {
+        window.clearInterval(interval);
+      }
+    }, 50);
+
+    return () => window.clearInterval(interval);
   }, [pathname]);
 
   return (
@@ -25,7 +45,6 @@ export function MetaPixel() {
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '${META_PIXEL_ID}');
-          fbq('track', 'PageView');
         `}
       </Script>
       <noscript>
