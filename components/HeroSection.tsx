@@ -49,7 +49,7 @@ export function HeroSection() {
             </div>
 
             <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs text-white/70 sm:text-sm">
-              <span>✅ Lunch Included</span>
+              <span>✅ Full Day Astro-Vastu Training</span>
               <span>✅ Stationery</span>
               <span>❌ No Recording</span>
             </p>

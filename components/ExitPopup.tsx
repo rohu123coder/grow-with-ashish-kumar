@@ -106,7 +106,7 @@ export function ExitPopup({ salesPopupOpen }: { salesPopupOpen: boolean }) {
           <div className="px-6 py-6">
             <ul className="space-y-2 text-sm text-ink sm:text-base">
               <li className="flex gap-2"><span className="text-gold">✅</span><span>Full day training with Ashissh Kumaar</span></li>
-              <li className="flex gap-2"><span className="text-gold">✅</span><span>Lunch, Tea &amp; Stationery included</span></li>
+              <li className="flex gap-2"><span className="text-gold">✅</span><span>Full day Astro-Vastu knowledge + stationery</span></li>
               <li className="flex gap-2"><span className="text-gold">✅</span><span>Advanced Remedies you won&apos;t find anywhere</span></li>
             </ul>
 

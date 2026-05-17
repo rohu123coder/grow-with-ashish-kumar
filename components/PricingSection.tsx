@@ -41,7 +41,7 @@ export function PricingSection() {
             <ul className="space-y-3 text-sm text-ink">
               {[
                 "Full Day Access (8 AM – 4 PM)",
-                "Lunch + Tea Included",
+                "Complete Astro-Vastu syllabus (7 modules)",
                 "Course Stationery Kit",
                 "Live training with Ashissh Kumaar",
               ].map((line) => (

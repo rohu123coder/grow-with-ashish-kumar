@@ -37,8 +37,8 @@ export function EventSection() {
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {[
-                { icon: "🍽️", label: "Lunch Provided" },
-                { icon: "☕", label: "Tea & Refreshments" },
+                { icon: "📚", label: "Astro-Vastu Knowledge" },
+                { icon: "🎯", label: "Practical Remedies" },
                 { icon: "📝", label: "Course Stationery" },
                 { icon: "💡", label: "Expert-Led Live Session" },
               ].map((f) => (
